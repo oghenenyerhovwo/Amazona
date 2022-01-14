@@ -27,7 +27,15 @@ export const listProducts = (seller = "") => dispatch => {
         type: PRODUCT_LIST_REQUEST,
     })
     axios
-        .get(`/api/products?seller=${seller}`)
+        .get(
+            `/api/products?seller=${seller}`,
+            {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                  }
+            }
+        )
         .then(res =>{
             dispatch({
             type: PRODUCT_LIST_SUCCESS,
