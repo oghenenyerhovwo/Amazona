@@ -20,7 +20,7 @@ export const uploadImage = (imageFile) => (dispatch ) => {
     })
     axios
         .post(
-            "/api/uploads",
+            "https://my-amazona-backend.herokuapp.com/api/uploads",
             bodyFormData,
             {
                 headers: {

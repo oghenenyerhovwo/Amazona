@@ -8,7 +8,7 @@ import {
 
 export const addToCart = (productId, qty) => (dispatch, getState) => {
   axios
-    .get("/api/products/" + productId)
+    .get("https://my-amazona-backend.herokuapp.com/api/products/" + productId)
     .then(({data}) =>{
         dispatch({
           type: CART_ADD_ITEM,
@@ -42,7 +42,7 @@ export const saveShippingAddress = (form) => (dispatch) => {
   })
   localStorage.setItem("shippingAddress", JSON.stringify(form))
   // axios
-  //   .get("/api/products/" + productId)
+  //   .get("https://my-amazona-backend.herokuapp.com/api/products/" + productId)
   //   .then(({data}) =>{
   //       dispatch({
   //         type: CART_SAVE_SHIPPING_ADDRESS,

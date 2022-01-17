@@ -36,7 +36,7 @@ export const createOrder = order => (dispatch, getState) => {
     })
     axios
         .post(
-            "/api/orders", 
+            "https://my-amazona-backend.herokuapp.com/api/orders", 
             order, 
             {
                 headers: {
@@ -70,7 +70,7 @@ export const detailOrder = orderId => (dispatch, getState) => {
     })
     axios
         .get(
-            "/api/orders/" + orderId, 
+            "https://my-amazona-backend.herokuapp.com/api/orders/" + orderId, 
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
@@ -101,7 +101,7 @@ export const payOrder = updatedOrder => (dispatch, getState) => {
     })
     axios
         .put(
-            `/api/orders/${updatedOrder._id}/pay`, 
+            `https://my-amazona-backend.herokuapp.com/api/orders/${updatedOrder._id}/pay`, 
             updatedOrder, 
             {
                 headers: {
@@ -132,7 +132,7 @@ export const listOrderMine = () => (dispatch, getState) => {
     })
     axios
         .get(
-            "/api/orders/mine", 
+            "https://my-amazona-backend.herokuapp.com/api/orders/mine", 
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
@@ -162,7 +162,7 @@ export const listOrder = (seller = "") => (dispatch, getState) => {
     })
     axios
         .get(
-            `/api/orders?seller=${seller}`, 
+            `https://my-amazona-backend.herokuapp.com/api/orders?seller=${seller}`, 
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
@@ -192,7 +192,7 @@ export const deleteOrder = orderId => (dispatch, getState) => {
     })
     axios
         .delete(
-            "/api/orders/" + orderId, 
+            "https://my-amazona-backend.herokuapp.com/api/orders/" + orderId, 
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
@@ -223,7 +223,7 @@ export const deliverOrder = orderId => (dispatch, getState) => {
     })
     axios
         .put(
-            `/api/orders/${orderId}/deliver`, 
+            `https://my-amazona-backend.herokuapp.com/api/orders/${orderId}/deliver`, 
             {}, 
             {
                 headers: {
