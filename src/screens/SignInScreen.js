@@ -25,8 +25,7 @@ const SignInScreen = props => {
     useEffect(() => {
         if(user.token){
             props.history.push(redirect)
-        }
-        console.log(user.token) // eslint-disable-next-line
+        } // eslint-disable-next-line
     }, [user.token,])
 
     // variables
