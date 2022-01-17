@@ -21,7 +21,7 @@ const SignInScreen = props => {
     const [form, setForm] = useState(initialState)
     const previousUrl=props.location.search && props.location.search.split("=")[1]
     const redirect=props.location.search ? `/${previousUrl}`: "/"
-    console.log(props)
+    
     useEffect(() => {
         if(user.token){
             props.history.push(redirect)
