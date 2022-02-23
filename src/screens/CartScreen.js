@@ -103,13 +103,13 @@ const CartScreen = props => {
             Cart is empty, <Link to="/">Go Shopping</Link>
         </MessageBox>
     ): (
-        <ul>
+        <ul style={{background: "#fff"}}>
             {cartComponent}
         </ul>
     )
 
     return (
-        <div className="row top">
+        <div style={{margin: "20px", borderRadius: "3px", boxShadow: "4px 4px 2px blur black" }} className="row top">
             <div className="col-2">
                 <h1>Shopping Cart</h1>
                 {displayComponent}

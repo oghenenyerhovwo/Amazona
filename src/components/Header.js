@@ -50,7 +50,7 @@ const Header = props => {
     return (
         <div>
             
-            <header className="row">
+            <header className="row nav-header">
               <div>
                   <Link to="/" className="brand" >amazona</Link> 
               </div>

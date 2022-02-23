@@ -3,14 +3,19 @@ import React from 'react'
 
 // importing components
 import Product from "../components/Product"
+import JumbotronComponent from "../components/JumbotronComponent"
 
 const HomeScreen = () => {
     return (
-        <div>
-            <div className="row center">
-              <Product />
+         <> 
+            <JumbotronComponent />
+            <br />
+            <div>
+                <div className="row center">
+                    <Product />
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

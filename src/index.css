@@ -4,6 +4,7 @@ html{
 }
 
 body{
+  background: rgb(240, 233, 233);
   margin: 0;
   height: 100vh; /* full height */
   font-size: 1.6rem;
@@ -17,31 +18,39 @@ body{
 }
 
 /* Layout */
-.grid-container{
-  display: grid;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer";
-  grid-template-columns: 1fr; /* no side bars */
-  grid-template-rows: 5rem 1fr 5rem;
-  height: 100%;
+
+
+.nav-header{
+  grid-area: header;
+  background-color: #4F2DC9;
+  width: 100%;
+  height: 30px;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 header{
-  grid-area: header;
-  background-color: #203040;
+  margin: 0;
 }
 
 main{
   grid-area: main;
-  padding: 1rem;
+  padding: 0rem;
+  margin-top: 30px;
+  z-index: -1,
 }
 
 footer{
   grid-area: footer;
-  background-color: #203040;
-  color: #ffff;
+  color: #203040;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
 }
 
 /* common */
@@ -183,7 +192,8 @@ img.large{
 
 /* Cart */
 .cart{
-  border: 0.1rem #c0c0c0 solid;
+  border: 0.1rem #c2bcd6 solid;
+  box-shadow: 4px 4px 2px blur black; 
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   margin: 1rem;
@@ -191,6 +201,7 @@ img.large{
 
 .cart-body{
   padding: 1rem;
+  background-color: #fff;
 }
 
 .cart-body > *{
