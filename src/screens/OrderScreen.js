@@ -33,7 +33,7 @@ const OrderScreen = props => {
     const orderId = props.match.params.id
     useEffect(() => {
         const addPayPalScript= async () => {
-            const {data} = await axios.get("/api/config/paypal")
+            const {data} = await axios.get("https://my-amazona-backend.herokuapp.com/api/config/paypal")
             const script= document.createElement("script")
             script.type="text/javascript"
             script.src=`https://www.paypal.com/sdk/js?client-id=${data}`
