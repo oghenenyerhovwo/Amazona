@@ -28,7 +28,7 @@ export const listProducts = (seller = "") => dispatch => {
     })
     axios
         .get(
-            `https://my-amazona-backend.herokuapp.com/api/products?seller=${seller}`,
+            `https://amazona-zlv1.onrender.com/api/products?seller=${seller}`,
             {
                 headers: {
                     'Accept': 'application/json',
@@ -57,7 +57,7 @@ export const detailsProduct = productId => dispatch => {
         payload: productId,
     })
     axios
-        .get("https://my-amazona-backend.herokuapp.com/api/products/" + productId)
+        .get("https://amazona-zlv1.onrender.com/api/products/" + productId)
         .then(res =>{
             dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
@@ -81,7 +81,7 @@ export const createProduct = (form) => (dispatch,getState ) => {
     })
     axios
         .post(
-            "https://my-amazona-backend.herokuapp.com/api/products",
+            "https://amazona-zlv1.onrender.com/api/products",
             form,
             {
                 headers: {
@@ -112,7 +112,7 @@ export const updateProduct = (productId, form) => (dispatch,getState ) => {
     })
     axios
         .put(
-            "https://my-amazona-backend.herokuapp.com/api/products/" + productId,
+            "https://amazona-zlv1.onrender.com/api/products/" + productId,
             form,
             {
                 headers: {
@@ -143,7 +143,7 @@ export const deleteProduct = (productId) => (dispatch,getState ) => {
     })
     axios
         .delete(
-            "https://my-amazona-backend.herokuapp.com/api/products/" + productId,
+            "https://amazona-zlv1.onrender.com/api/products/" + productId,
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
