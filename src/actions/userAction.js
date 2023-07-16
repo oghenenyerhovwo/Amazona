@@ -29,7 +29,7 @@ export const signIn = (form) => dispatch => {
         type: USER_SIGNIN_REQUEST,
     })
     axios
-        .post("https://my-amazona-backend.herokuapp.com/api/users/signIn", form)
+        .post("https://amazona-zlv1.onrender.com/api/users/signIn", form)
         .then(res =>{
             dispatch({
             type: USER_SIGNIN_SUCCESS,
@@ -61,7 +61,7 @@ export const register = (form) => dispatch => {
         type: USER_REGISTER_REQUEST,
     })
     axios
-        .post("https://my-amazona-backend.herokuapp.com/api/users/register", form)
+        .post("https://amazona-zlv1.onrender.com/api/users/register", form)
         .then(res =>{
             dispatch({
             type: USER_REGISTER_SUCCESS,
@@ -87,7 +87,7 @@ export const detailsUser = userId => (dispatch, getState) => {
     })
     axios
         .get(
-            "https://my-amazona-backend.herokuapp.com/api/users/" + userId,
+            "https://amazona-zlv1.onrender.com/api/users/" + userId,
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
@@ -118,7 +118,7 @@ export const updateUserProfile = (userId, form) => (dispatch, getState) => {
     })
     axios
         .put(
-            "https://my-amazona-backend.herokuapp.com/api/users/profile",
+            "https://amazona-zlv1.onrender.com/api/users/profile",
             form,
             {
                 headers: {
@@ -150,7 +150,7 @@ export const listUser = () => (dispatch, getState) => {
     })
     axios
         .get(
-            "https://my-amazona-backend.herokuapp.com/api/users/",
+            "https://amazona-zlv1.onrender.com/api/users/",
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
@@ -180,7 +180,7 @@ export const deleteUser = userId => (dispatch, getState) => {
     })
     axios
         .delete(
-            "https://my-amazona-backend.herokuapp.com/api/users/" + userId,
+            "https://amazona-zlv1.onrender.com/api/users/" + userId,
             {
                 headers: {
                     Authorization: `Bearer ${user.token}`
@@ -210,7 +210,7 @@ export const updateUser = (userId, editedUser, ) => (dispatch, getState) => {
     })
     axios
         .put(
-            "https://my-amazona-backend.herokuapp.com/api/users/" + userId,
+            "https://amazona-zlv1.onrender.com/api/users/" + userId,
             editedUser,
             {
                 headers: {
